@@ -73,6 +73,11 @@ document.querySelector('#book-form').addEventListener('submit', (e) => {
     const author = document.querySelector('#author').value;
     const isbn = document.querySelector('#isbn').value;
 
+    // Validate
+    if(title === '' || author === '' || isbn === '') {
+        alert('Please fill in all fields');
+    } else {
+
     // Instantiate Book
     const book = new Book(title, author, isbn);
 
@@ -82,6 +87,10 @@ document.querySelector('#book-form').addEventListener('submit', (e) => {
     // Clear fields
     UI.clearFields();
 
+
+    }
+
+   
     
 });
 
